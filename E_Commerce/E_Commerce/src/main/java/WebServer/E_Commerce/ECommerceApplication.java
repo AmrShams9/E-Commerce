@@ -13,7 +13,6 @@ public class ECommerceApplication {
 	/*
 	Core Classes
 User
-
 Attributes:
 userId: String
 username: String
