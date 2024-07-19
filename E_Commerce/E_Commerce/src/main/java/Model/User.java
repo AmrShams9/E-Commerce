@@ -4,6 +4,8 @@ package Model;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")  // Specifies the table name in the database
 public class User {
@@ -21,6 +23,10 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    private List<Rating> rating;
+
+    private List<Review> reviews;
 
     // Default constructor
     public User() {}
@@ -63,6 +69,20 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public List<Rating> getRating() {
+        return rating;
+    }
+
+    public void setRating(List<Rating> rating) {
+        this.rating = rating;
+    }
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
     @Override
